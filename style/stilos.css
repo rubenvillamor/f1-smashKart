@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #008000;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow-y: hidden;
+}
+
+#game-box {
+  width:50vw;
+  height:1200vh;
+  background-image: url("../imagenes/road.png");
+  background-repeat: repeat-y;
+  background-position: center;
+  position: relative;
+  top: -80vh;
+  z-index: -9;
+}
+
+#start-btn {
+  background-color: greenyellow;
+  color: black;
+  padding: 20px;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#restart-btn {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+#wingame-screen, #gameover-screen {
+  display: none;
+}
+
+#alonso {
+  position: absolute;
+  top: 15vh;
+}
+
+#alonso img {
+  width: 70px;
+  height: 140px;
+}
+
+
+@keyframes roadMovement {
+  0% {
+    top: -1100vh;
+  }
+  100% {
+    top: -200vh;
+  }
+}
