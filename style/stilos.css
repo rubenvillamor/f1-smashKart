@@ -12,15 +12,22 @@ body {
   overflow-y: hidden;
 }
 
+#road {
+  width: 70%;
+  height: 100%;
+  background-color: rgb(125, 125, 125);
+  position: relative;
+}
+
 #game-box {
   width:50vw;
-  height:1200vh;
+  height: 100vh;
   background-image: url("../imagenes/road.png");
   background-repeat: repeat-y;
   background-position: center;
   position: relative;
-  top: -80vh;
-  z-index: -9;
+  /* top: -80vh; */
+  /* z-index: -9; */
 }
 
 #start-btn {
@@ -64,12 +71,12 @@ body {
   height: 140px;
 }
 
-
-@keyframes roadMovement {
+/* @keyframes roadMovement {
   0% {
-    top: -1100vh;
+    top: 0;
   }
   100% {
-    top: -200vh;
+    top: -2000vh;
   }
-}
+} */
+
