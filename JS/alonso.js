@@ -4,11 +4,16 @@ class Alonso {
 
     constructor() {
 
+       
+        this.node = document.createElement("img");
+        this.node.src = "../imagenes/alonso.jpg";
+        gameBoxNode.append(this.node);
+
         // Porpiedades de Fernando
-        this.node = document.createElement("img")
-        this.node.src = "../imagenes/f1 Alonso.jpg"
-
-
+        this.x = 200;
+        this.y = 50;
+        this.W = 30;
+        this.h = 40;
 
     }
 

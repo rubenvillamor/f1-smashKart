@@ -17,8 +17,8 @@ function startGame () {
 
     // que Inicie el juego
 
-    let top = 15
-    let right = 0
+    let top = 50;
+    let right = 1200;
     window.addEventListener('keydown', function (tecla) {
         console.log(tecla.key)
         if (tecla.key == 'ArrowUp') {
