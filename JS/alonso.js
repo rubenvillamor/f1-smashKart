@@ -8,9 +8,11 @@ class Alonso {
         // cómo que 33
         this.trophies = 33
 
+        this.pos = 20
+
         // Porpiedades de Fernando
-        this.w = 70;
-        this.h = 140;
+        this.w = 60;
+        this.h = 120;
         this.x = 0;
         this.y = 0;
 

@@ -10,6 +10,7 @@ body {
   display: grid;
   place-items: center;
   overflow-y: hidden;
+  font-family: 'Racing Sans One', cursive;
 }
 
 #road {
@@ -17,60 +18,7 @@ body {
   height: 100%;
   background-color: rgb(125, 125, 125);
   position: relative;
-}
-
-#game-box {
-  width:50vw;
-  height: 100vh;
-  background-image: url("../imagenes/road.png");
-  background-repeat: repeat-y;
-  background-position: center;
-  position: relative;
-  /* top: -80vh; */
-  /* z-index: -9; */
-}
-
-/* #start-btn {
-  background-color: greenyellow;
-  color: black;
-  padding: 20px;
-  font-size: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  border-radius: 20px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-}
-
-#start-container {
-  background-image: url("../imagenes/craiyon_091909_una_imagen_que_sea_un_titulo_que_se_llama_smash_f1.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* Ajusta el tamaño y posicionamiento del contenedor según tus necesidades */
-  /* width: 30%;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */ 
-
-#start-btn {
-  background-color: black;
-  color: red;
-  padding: 20px;
-  font-size: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  border-radius: 20px;
-
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
+  display: none;
 }
 
 #start-container {
@@ -85,16 +33,21 @@ body {
   height: 50vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
 }
 
-#start-container.hide {
-  display: none;
-}
-
-#restart-btn {
-  display: none;
+#start-btn {
+  background-color: black;
+  color: red;
+  padding: 20px;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 20px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
 }
 
 .container {
@@ -102,41 +55,27 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  gap: 10px;
 }
 
-#wingame-screen, #gameover-screen #start-container {
+.restart-btn {
+  background-color: black;
+  color: red;
+  padding: 20px;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 20px;
+}
+
+#gameover-screen, #wingame-screen {
   display: none;
 }
 
-#alonso {
+#clasif {
+  padding: 20px;
+  background-color: #ffffff;
   position: absolute;
-  top: 15vh;
+  top: 10px;
+  left: 10px;
+  display: none;
 }
-
-#alonso img {
-  width: 70px;
-  height: 140px;
-}
-
-<<<<<<< HEAD
-@keyframes roadMovement {
-=======
-/* @keyframes roadMovement {
->>>>>>> e01c4e5452cfae8a159b2138ecb5229c1a003e8b
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -2000vh;
-  }
-<<<<<<< HEAD
-}
-
-@media screen {
-  
-}
-=======
-} */
-
->>>>>>> e01c4e5452cfae8a159b2138ecb5229c1a003e8b

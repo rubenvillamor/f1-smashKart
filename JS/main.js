@@ -1,21 +1,23 @@
 // Variables Globales
-
 const body = document.querySelector("body");
 const btnStartNode = document.querySelector("#start-btn");
-const gameBoxNode = document.querySelector("#game-box");
 const alonso = document.querySelector("#alonso");
 const roadDiv = document.querySelector("#road");
-document.getElementById('start-btn').addEventListener('click', function() {
-    document.getElementById('start-container').classList.add('hide');
-  });
-// const splashScreenNode = document.querySelector("#splash-screen");
-// const winGameNode = document.querySelector("#wingame-screen");
+const clasifDiv = document.querySelector("#clasif")
+const clasifPos = document.querySelector("#pos")
+
+const winGameNode = document.querySelector("#wingame-screen");
+const gameOverNode = document.querySelector("#gameover-screen");
+const startNode = document.querySelector("#start-container");
+const restartBtns = document.querySelectorAll(".restart-btn");
 
 // Management Functions
-
 function startGame() {
   btnStartNode.style.display = "none";
-
+  roadDiv.style.display = 'block';
+  startNode.style.display = 'none';
+  clasifDiv.style.display = "block"
+  
   let gameObjeto = new Game();
   gameObjeto.gameLoop();
 
@@ -31,3 +33,12 @@ function startGame() {
 // Event Listeners
 
 btnStartNode.addEventListener("click", startGame);
+document.getElementById('start-btn').addEventListener('click', function() {
+  document.getElementById('start-container').classList.add('hide');
+});
+
+restartBtns.forEach( (btn) => {
+  btn.addEventListener('click', () => {
+    location.reload()
+  })
+})
