@@ -12,18 +12,25 @@ body {
   overflow-y: hidden;
 }
 
+#road {
+  width: 70%;
+  height: 100%;
+  background-color: rgb(125, 125, 125);
+  position: relative;
+}
+
 #game-box {
   width:50vw;
-  height:1200vh;
+  height: 100vh;
   background-image: url("../imagenes/road.png");
   background-repeat: repeat-y;
   background-position: center;
   position: relative;
-  top: -80vh;
-  z-index: -9;
+  /* top: -80vh; */
+  /* z-index: -9; */
 }
 
-#start-btn {
+/* #start-btn {
   background-color: greenyellow;
   color: black;
   padding: 20px;
@@ -38,6 +45,54 @@ body {
   z-index: 100;
 }
 
+#start-container {
+  background-image: url("../imagenes/craiyon_091909_una_imagen_que_sea_un_titulo_que_se_llama_smash_f1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Ajusta el tamaño y posicionamiento del contenedor según tus necesidades */
+  /* width: 30%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */ 
+
+#start-btn {
+  background-color: black;
+  color: red;
+  padding: 20px;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 20px;
+
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#start-container {
+  /* Ajusta la ruta de la imagen según tu archivo */
+  background-image: url("../imagenes/craiyon_091909_una_imagen_que_sea_un_titulo_que_se_llama_smash_f1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  /* Ajusta el tamaño y posicionamiento del contenedor según tus necesidades */
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#start-container.hide {
+  display: none;
+}
+
 #restart-btn {
   display: none;
 }
@@ -50,7 +105,7 @@ body {
   margin: 50px;
 }
 
-#wingame-screen, #gameover-screen {
+#wingame-screen, #gameover-screen #start-container {
   display: none;
 }
 
@@ -64,12 +119,15 @@ body {
   height: 140px;
 }
 
-
 @keyframes roadMovement {
   0% {
-    top: -1100vh;
+    top: 0;
   }
   100% {
-    top: -200vh;
+    top: -2000vh;
   }
+}
+
+@media screen {
+  
 }
