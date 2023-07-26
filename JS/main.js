@@ -31,3 +31,4 @@ function startGame() {
 // Event Listeners
 
 btnStartNode.addEventListener("click", startGame);
+
