@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> e01c4e5452cfae8a159b2138ecb5229c1a003e8b
 class Alonso {
 
     constructor () {
