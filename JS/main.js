@@ -5,9 +5,12 @@ const btnStartNode = document.querySelector("#start-btn");
 const gameBoxNode = document.querySelector("#game-box");
 const alonso = document.querySelector("#alonso");
 const roadDiv = document.querySelector("#road");
+<<<<<<< HEAD
 document.getElementById('start-btn').addEventListener('click', function() {
     document.getElementById('start-container').classList.add('hide');
   });
+=======
+>>>>>>> e01c4e5452cfae8a159b2138ecb5229c1a003e8b
 // const splashScreenNode = document.querySelector("#splash-screen");
 // const winGameNode = document.querySelector("#wingame-screen");
 
@@ -31,4 +34,7 @@ function startGame() {
 // Event Listeners
 
 btnStartNode.addEventListener("click", startGame);
+<<<<<<< HEAD
 
+=======
+>>>>>>> e01c4e5452cfae8a159b2138ecb5229c1a003e8b

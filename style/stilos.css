@@ -119,15 +119,24 @@ body {
   height: 140px;
 }
 
+<<<<<<< HEAD
 @keyframes roadMovement {
+=======
+/* @keyframes roadMovement {
+>>>>>>> e01c4e5452cfae8a159b2138ecb5229c1a003e8b
   0% {
     top: 0;
   }
   100% {
     top: -2000vh;
   }
+<<<<<<< HEAD
 }
 
 @media screen {
   
 }
+=======
+} */
+
+>>>>>>> e01c4e5452cfae8a159b2138ecb5229c1a003e8b
