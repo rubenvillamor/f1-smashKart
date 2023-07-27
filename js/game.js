@@ -97,10 +97,6 @@ class Game {
       enemyCar.moveDown();
     });
 
-    this.obstaculoAparece()
-    this.obstacles.forEach((obstacle) => {
-      obstacle.moveDown()
-    })
 
     // Alonso ha adelantado a Verstappen
     if (this.verstappenAdded && this.alonso.y > (this.enemyCars.find(car => car.name === "Verstappen")?.y + this.enemyCars.find(car => car.name === "Verstappen")?.h) * 3) {
