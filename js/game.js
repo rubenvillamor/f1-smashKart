@@ -20,10 +20,10 @@ class Game {
     if ((this.gameInProgress && this.enemyCars.length === 0) || this.frames % 60 === 0) {
       if (this.enemyCars.length < 18 && !this.verstappenAdded) {
         const carName = "vehiculo " + (18 - this.enemyCars.length);
-        const randomEnemyCar = new EnemyCar(carName, "../imagenes/mercedes.png", Math.random() * roadDiv.clientWidth);
+        const randomEnemyCar = new EnemyCar(carName, "./imagenes/mercedes.png", Math.random() * roadDiv.clientWidth);
         this.enemyCars.push(randomEnemyCar);
       } else if (!this.verstappenAdded) {
-        const verstappen = new EnemyCar("Verstappen", "../imagenes/sergio-perez-red-bull-racing-r-1-removebg-preview.png", Math.random() * roadDiv.clientWidth);
+        const verstappen = new EnemyCar("Verstappen", "./imagenes/sergio-perez-red-bull-racing-r-1-removebg-preview.png", Math.random() * roadDiv.clientWidth);
         this.enemyCars.push(verstappen);
         this.verstappenAdded = true;
       }
