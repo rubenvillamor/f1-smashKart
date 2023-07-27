@@ -7,6 +7,7 @@ class Game {
     this.alonso = new Alonso();
     this.enemyCars = [];
     this.roadDivisors = [];
+    this.obstacles = [];
     this.isGameOn = true;
     this.frames = 0;
     this.gameInProgress = true;
@@ -14,13 +15,10 @@ class Game {
   }
 
   vehiculoAparece = () => {
-    // let verstappenAdded = false;
-    // let gameInProgress = true;
-
     if ((this.gameInProgress && this.enemyCars.length === 0) || this.frames % 60 === 0) {
       if (this.enemyCars.length < 18 && !this.verstappenAdded) {
         const carName = "vehiculo " + (18 - this.enemyCars.length);
-        const randomEnemyCar = new EnemyCar(carName, "./imagenes/mercedes.png", Math.random() * roadDiv.clientWidth);
+        const randomEnemyCar = new EnemyCar(carName, "./imagenes/mercedes.png", Math.random() * (roadDiv.clientWidth - 110)); // le restamos 110 porque es el ancho del coche para evitar que se salga de la carretera
         this.enemyCars.push(randomEnemyCar);
       } else if (!this.verstappenAdded) {
         const verstappen = new EnemyCar("Verstappen", "./imagenes/sergio-perez-red-bull-racing-r-1-removebg-preview.png", Math.random() * roadDiv.clientWidth);
@@ -37,16 +35,27 @@ class Game {
     }
   }
 
+  obstaculoAparece () {
+    if (this.obstacles.length === 0 || this.frames % 360 === 0) {
+      const obstacle = new Obstacle(Math.random() * (roadDiv.clientWidth - 70))
+      this.obstacles.push(obstacle)
+    }
+  }
+
   gameOver = () => {
     this.isGameOn = false;
     roadDiv.style.display = "none" // oculta la pantalla de juego
     gameOverNode.style.display = "flex";
+    audio.pause();
+    audio.currentTime = 0;
   };
 
   gameWin = () => {
     this.isGameOn = false;
     roadDiv.style.display = "none" // oculta la pantalla de juego
     winGameNode.style.display = "flex"
+    audio.pause();
+    audio.currentTime = 0;
   }
 
   colisionConVehiculos() {
@@ -87,6 +96,11 @@ class Game {
     this.enemyCars.forEach((enemyCar) => {
       enemyCar.moveDown();
     });
+
+    this.obstaculoAparece()
+    this.obstacles.forEach((obstacle) => {
+      obstacle.moveDown()
+    })
 
     // Alonso ha adelantado a Verstappen
     if (this.verstappenAdded && this.alonso.y > (this.enemyCars.find(car => car.name === "Verstappen")?.y + this.enemyCars.find(car => car.name === "Verstappen")?.h) * 3) {

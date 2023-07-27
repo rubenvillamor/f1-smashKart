@@ -11,8 +11,8 @@ class Alonso {
         this.pos = 20
 
         // Porpiedades de Fernando
-        this.w = 110;
-        this.h = 145;
+        this.w = 95;
+        this.h = 115;
         this.x = 0;
         this.y = 0;
 

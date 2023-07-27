@@ -10,36 +10,26 @@ const winGameNode = document.querySelector("#wingame-screen");
 const gameOverNode = document.querySelector("#gameover-screen");
 const startNode = document.querySelector("#start-container");
 const restartBtns = document.querySelectorAll(".restart-btn");
+const starButtonNode = document.getElementById("#start-btn");
 
-const gameMusicNode = document.getElementById("#game-music");
-const starButtonNode = document.getElementById("#start-btn")
+// Instanciamos el juego
+let gameObjeto = new Game();
 
+// Instanciamos el audio del juego
+var audio = new Audio('../audio/formula-uno-.mp3');
+audio.volume = 0.02
 
 // Management Functions
 function startGame() {
+  // Iniciamos el sonido del juego
+  audio.play();
+
   btnStartNode.style.display = "none";
   roadDiv.style.display = 'block';
   startNode.style.display = 'none';
   clasifDiv.style.display = "block"
-  
-  let gameObjeto = new Game();
+
   gameObjeto.gameLoop();
-
-  // que Inicie el juego
-  window.addEventListener("keydown", function (tecla) {
-    if (tecla.key === "ArrowDown") gameObjeto.alonso.moveDown();
-    if (tecla.key === "ArrowUp") gameObjeto.alonso.moveUp();
-    if (tecla.key === "ArrowRight") gameObjeto.alonso.moveRight();
-    if (tecla.key === "ArrowLeft") gameObjeto.alonso.moveLeft();
-  });
-}
-
-function toggleMusic ()  {
-  if ( startGame === true) {
-      gameMusicNode.play()
-  } else {
-    gameMusicNode.pause()
-  }
 }
 
 // Event Listeners
@@ -55,4 +45,10 @@ restartBtns.forEach( (btn) => {
   })
 })
 
-starButtonNode.addEventListener("click", toggleMusic);
+// que Inicie el juego
+window.addEventListener("keydown", function (tecla) {
+  if (tecla.key === "ArrowDown") gameObjeto.alonso.moveDown();
+  if (tecla.key === "ArrowUp") gameObjeto.alonso.moveUp();
+  if (tecla.key === "ArrowRight") gameObjeto.alonso.moveRight();
+  if (tecla.key === "ArrowLeft") gameObjeto.alonso.moveLeft();
+});
