@@ -11,6 +11,10 @@ const gameOverNode = document.querySelector("#gameover-screen");
 const startNode = document.querySelector("#start-container");
 const restartBtns = document.querySelectorAll(".restart-btn");
 
+const gameMusicNode = document.getElementById("#game-music");
+const starButtonNode = document.getElementById("#start-btn")
+
+
 // Management Functions
 function startGame() {
   btnStartNode.style.display = "none";
@@ -30,6 +34,14 @@ function startGame() {
   });
 }
 
+function toggleMusic ()  {
+  if ( startGame === true) {
+      gameMusicNode.play()
+  } else {
+    gameMusicNode.pause()
+  }
+}
+
 // Event Listeners
 
 btnStartNode.addEventListener("click", startGame);
@@ -42,3 +54,5 @@ restartBtns.forEach( (btn) => {
     location.reload()
   })
 })
+
+starButtonNode.addEventListener("click", toggleMusic);

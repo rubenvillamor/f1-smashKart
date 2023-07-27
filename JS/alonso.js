@@ -2,7 +2,7 @@ class Alonso {
 
     constructor () {
         this.node = document.createElement("img");
-        this.node.src = "./imagenes/alonso.jpg";
+        this.node.src = "./imagenes/aston-martin-amr22-1-removebg-preview.png";
         roadDiv.append(this.node);
 
         // cómo que 33
@@ -11,8 +11,8 @@ class Alonso {
         this.pos = 20
 
         // Porpiedades de Fernando
-        this.w = 60;
-        this.h = 120;
+        this.w = 110;
+        this.h = 145;
         this.x = 0;
         this.y = 0;
 

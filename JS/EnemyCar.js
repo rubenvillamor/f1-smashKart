@@ -12,8 +12,8 @@ class EnemyCar {
 
         // Porpiedades del coche
         this.name = name;
-        this.w = 60;
-        this.h = 120;
+        this.w = 110;
+        this.h = 145;
         this.x = x;
         this.y = roadDiv.clientWidth - this.w
 
