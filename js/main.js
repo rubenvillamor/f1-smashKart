@@ -16,7 +16,7 @@ const starButtonNode = document.getElementById("#start-btn");
 let gameObjeto = new Game();
 
 // Instanciamos el audio del juego
-var audio = new Audio('../audio/formula-uno-.mp3');
+var audio = new Audio('./audio/formula-uno-.mp3');
 audio.volume = 0.02
 
 // Management Functions

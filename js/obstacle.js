@@ -4,7 +4,7 @@ class Obstacle {
     constructor (x) {
 
         this.node = document.createElement("img");
-        this.node.src = '../imagenes/redbull.jpg';
+        this.node.src = './imagenes/redbull.jpg';
         roadDiv.append(this.node);
         
         this.gravitySpeed = 4;
