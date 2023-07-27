@@ -1,19 +1,17 @@
-class EnemyCar {
 
-    constructor(name, srcImage, x) {
+class Obstacle {
+
+    constructor (x) {
 
         this.node = document.createElement("img");
-        this.node.src = srcImage;
+        this.node.src = '../imagenes/redbull.jpg';
         roadDiv.append(this.node);
         
-        this.gravitySpeed = 5;
+        this.gravitySpeed = 4;
 
-        this.hasBeenPassed = false
-
-        // Porpiedades del coche
-        this.name = name;
-        this.w = 110;
-        this.h = 145;
+        // Porpiedades del obstáculo
+        this.w = 70;
+        this.h = 70;
         this.x = x;
         this.y = roadDiv.clientHeight
 
