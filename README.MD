@@ -115,7 +115,7 @@ Example:
 
 
 ### Slides
-[Link](www.your-slides-url-here.com)
+[Link](https://villamorlage.imgur.com/all/)
 
 ## Deploy
 [Link](https://rubenvillamor.github.io/f1-smashKart/)
